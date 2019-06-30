@@ -1,7 +1,432 @@
-/*
-background-grey: #F4F3F4;
-button-purple: #192592
-main-titles dark-grey: #2C303F;
-paragraph grey: #5b5e6d;
-nav grey: #5b5e6d;
-*/
+body {
+    margin : 0;
+} 
+
+h1 {
+    font-size : 3em;
+    width : 60%;
+}
+
+h1, h2 {
+    color : #2C303F;
+}
+
+button {
+    font-weight: bold;
+}
+
+p {
+    color : #5b5e6d;
+}
+
+/* NAV BAR */
+
+nav {
+    position : sticky ;
+    top : 0px;
+    background-color : white;
+    display : flex;
+    justify-content : space-between;
+    color : #5b5e6d;
+    align-items: center;
+    flex-wrap : wrap;
+    padding : 2% 5%;
+    border-bottom : 1px solid #D3D3D3;
+}
+
+nav ul {
+    display : none;
+} 
+
+nav img {
+    width : 25%;
+}
+
+.hamburger-menu {
+	width: 30px;
+	height: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.hamburger-menu span {
+	width: 100%;
+	height: 4px;
+	background-color: #5b5e6d;
+}
+
+/* HEADER */
+
+header {
+    display : flex;
+    flex-direction : column-reverse;
+    margin : 5%;
+}
+
+.header2 {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+input {
+    border : 1px solid #D3D3D3;
+    border-radius : 4px;
+    width : 100%;
+    box-sizing : border-box;
+    margin : 2% auto;
+    padding : 20px;
+}
+
+header button {
+    background-color : #192592;
+    border : 1px solid #192592;
+    color : white;
+    border-radius : 4px;
+    width : 100%;
+    padding : 20px;
+}
+
+header img {
+    width : 100%;
+}
+
+/* MAIN */
+
+main {
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+    flex-wrap : wrap; 
+    text-align : center;
+}
+
+main p {
+    margin : 20px 0;
+}
+
+main button {
+    background-color : white;
+    color : #192592;
+    border : 1px solid #192592;
+    border-radius : 4px;
+    width : 100%;
+    padding : 20px;
+}
+
+.section1 {
+    background : #F4F3F4;
+}
+
+.good-company {
+    padding : 3%;
+}
+
+.images {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    flex-wrap : wrap;
+}
+
+.images div {
+    width : 100%;
+    height : 200px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    box-sizing: border-box;
+	border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.images img {
+    width : 50%;
+}
+
+.section2 {
+    width : 100%;
+}
+
+.try-it {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    width:100%;
+}
+
+h3 {
+    font-size : 1.5em;
+}
+
+.try-it p {
+    margin : 0;
+}
+
+.get-started {
+    width : 90%;
+    margin : 2% 5% 5% 5%;
+}
+
+.get-started button {
+    background-color : #192592;
+    border : 1px solid #192592;
+    color : white;
+    border-radius : 4px;
+    width : 100%;
+    padding : 20px;
+}
+
+.get-started input {
+    margin : 0;
+}
+
+/* FOOTER */
+
+footer {
+    color : #5b5e6d;
+    line-height : 2;
+}
+
+.lists {
+    display : flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+}
+
+.slack-logo {
+    width : 100%;
+}
+
+.slack-logo img {
+    width : 25%;
+    padding-left : 5%;
+}
+
+.lists ul {
+    list-style-type : none;
+    padding : 0 0 0 25%;
+    width : 120px;
+}
+
+.list-part {
+    width : 50%;
+}
+
+.footer2 {
+    padding : 2% 5%;
+}
+
+.footer2 ul {
+    display : flex;
+    flex-direction : row;
+    list-style-type : none;
+    justify-content : space-around; 
+    padding : 0;
+}
+
+.footer2 img {
+    width : 5%;
+}
+
+.links-footer {
+    display : flex;
+    flex-direction : column;
+}
+
+.two-rows {
+    display : flex;
+    flex-direction : row;
+    justify-content : center;
+    padding : 5px 15px;
+}
+
+.two-rows i {
+    padding : 8px;
+}
+
+.two-rows img {
+    padding : 5px;
+}
+
+
+/* MEDIA QUERY ONE */
+
+@media(min-width : 767px) {
+
+    body button, 
+    body input {
+        width : 70%;
+    }
+
+    h1 {
+        width : 100%;
+    }
+
+    /* MAIN MEDIA QUERY 1  */
+
+    .images {
+        flex-direction : row;
+    }
+
+    .images div {
+        width : 50%;
+    }
+
+    .images div:nth-of-type(odd) {
+		border-right: 1px solid rgb(194, 194, 194);
+    }
+    
+    .images div:nth-last-child(2) {
+		border-bottom: none;
+    }
+
+    .section2 {
+        display : flex;
+        justify-content: space-between;
+        width : 100%;
+    }
+
+    .try-it {
+        align-items : flex-start;
+        padding-left : 5%;
+    }
+
+    .get-started {
+        display : flex;
+        justify-content: flex-end;
+    }
+
+    /* FOOTER MEDIA QUERY 1 */
+
+    .slack-logo {
+        width : 20%;
+    }
+
+    .slack-logo img {
+        width : 70%;
+    }
+
+    .list-part {
+        width : 20%;
+    }
+
+    .footer2 {
+        display : flex;
+        flex-direction : row;
+        justify-content: space-between;
+    }
+
+    .footer2 ul {
+        width : 40%;
+        margin : 1%;
+    }
+
+    .footer2 img {
+        width : 15%;
+    }
+
+    .links-footer {
+        width : 40%;
+        flex-direction : row;
+    }
+
+    .two-rows {
+        padding : 0;
+    }
+
+}
+
+/* MEDIA QUERY 2 */
+
+@media(min-width : 960px) {
+
+    /* MAIN MEDIA QUERY 2 */
+    
+    .images div {
+     width : 33%;
+    }
+
+    .images div:nth-last-child(3),
+	.images div:nth-last-child(2) {
+		border-bottom: none;
+	}
+
+	.images div:nth-of-type(2),
+	.images div:nth-of-type(5) {
+		border-left: 1px solid rgb(194, 194, 194);
+		border-right: 1px solid rgb(194, 194, 194);
+    }
+    
+}
+
+
+/* MEDIA QUERY 3 */
+
+@media(min-width : 1200px){
+
+
+    /* NAV BAR MEDIA QUERY 3*/
+
+    nav ul {
+        display : flex;
+        width : 60%;
+        flex-direction : row;
+        list-style-type: none;
+        justify-content: space-around;
+        font-size : 1.5em;
+    }
+
+    nav img {
+        width : 15%;
+    }
+
+    .nav1 {
+        margin : 1em;
+    }
+
+    .workspaces {
+        border : 1px solid grey;
+        padding : 0.5em;
+        margin-top : 0.5em;
+    }
+
+    .hamburger-menu {
+        display : none;
+    }
+
+    /* HEADER MEDIA-QUERY 3*/
+
+    header {
+        display : flex;
+        flex-direction : row;
+    }
+
+    header div {
+        width : 50%;
+    }
+
+    .header2 {
+        width : 100%;
+        align-items : flex-start;
+    }
+
+    header input {
+        display : none;
+    }
+
+    header button {
+        width : 30%;
+    }
+
+    /* FOOTER MEDIA QUERY 3*/
+
+    .footer2 ul {
+        width : 30%;
+    }
+
+    .links-footer {
+        width : 30%;
+    }
+
+}
